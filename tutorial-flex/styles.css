@@ -28,7 +28,7 @@ body {
     min-height: 100vh;
 }
 
-.wrapper > * {
+.wrapper>* {
     padding: 20px;
 }
 
@@ -93,7 +93,7 @@ body {
     justify-content: center;
     flex-grow: 1;
     min-height: 350px;
-    background: var(--main-purple-color) url('https://images.unsplash.com/photo-1557683316-973673baf926?w=1600') no-repeat center / cover;
+    background: var(--main-purple-color) url('https://cms-assets.tutsplus.com/cdn-cgi/image/width=1700/uploads/users/30/posts/32086/image/bg.jpg') no-repeat center / cover;
     background-blend-mode: luminosity;
     color: var(--main-white-color);
     text-align: left;
@@ -111,28 +111,8 @@ body {
 
 .page-main p {
     font-size: 1.1rem;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     line-height: 1.8;
-}
-
-.cta-main {
-    padding: 12px 30px;
-    background-color: var(--main-white-color);
-    color: var(--main-purple-color);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
-
-.cta-main:hover {
-    background-color: var(--main-purple-color);
-    color: var(--main-white-color);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* 4. PIE DE PÁGINA */
