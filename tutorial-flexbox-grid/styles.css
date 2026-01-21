@@ -1,0 +1,422 @@
+/* ===== ESTILOS GENERALES ===== */
+
+/* Sobrescribe el estilo por defecto y establece el padding y el margen a cero */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Texto color blanco en todas partes */
+body {
+    font-family: "Lato", sans-serif;
+    color: white;
+}
+
+/* Hacer todo el texto de los links negro y sin decoración */
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 300;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Todas las imágenes deben ser del mismo tamaño que su contenedor */
+img {
+    width: 100%;
+}
+
+/* Remover el estilo a los elementos de una lista */
+li {
+    list-style-type: none;
+}
+
+/* ===== CLASES UTILITARIAS ===== */
+
+/* Centra el elemento y establece un ancho máximo */
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    overflow: visible;
+}
+
+/* Flexbox - alinea elementos horizontalmente */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* Grid de 2 columnas */
+.grid {
+    overflow: visible;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+/* Grid de 3 columnas */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+/* ===== BARRA DE NAVEGACIÓN ===== */
+
+/* Aplica el color de fondo, altura y padding */
+.navbar {
+    background-color: purple;
+    height: 70px;
+    padding: 0 30px;
+}
+
+/* Establece el tamaño de la fuente, reduce el peso de la fuente */
+.navbar h1 {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.navbar .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: white;
+    padding: 9px;
+    margin: 0 10px;
+}
+
+.navbar a:hover {
+    color: #9867C5;
+    border-bottom: 3px solid #9867C5;
+}
+
+/* ===== ÁREA DE PRESENTACIÓN (SHOWCASE) ===== */
+
+.showcase {
+    height: 300px;
+    background-color: purple;
+}
+
+/* Añade margen bajo el texto */
+.showcase p {
+    margin-bottom: 30px;
+}
+
+/* Añade una sombra bajo la imagen */
+.showcase img {
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
+}
+
+/* Añade algo de padding al contenido del formulario */
+.showcase-form {
+    padding-left: 7px;
+}
+
+.grid-item-1,
+.grid-item-2 {
+    position: relative;
+    top: 50px;
+}
+
+.showcase input[type='email'] {
+    padding: 10px 70px 10px 0;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    padding-left: 6px;
+}
+
+.btn {
+    border-radius: 6px;
+    padding: 12px 20px;
+    background: #9867C5;
+    border: none;
+    margin-left: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.showcase-form {
+    margin: auto;
+}
+
+/* Cambia el tipo de fuente y su tamaño */
+.little-info {
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ===== CONTENEDOR INFERIOR ===== */
+
+.lower-container {
+    margin-top: 120px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+/* ===== SECCIÓN DE ESTADÍSTICAS ===== */
+
+.stats {
+    padding-top: 100px;
+    animation: slideInFromLeft 1s ease-in;
+}
+
+.stats .flex {
+    flex-direction: column;
+}
+
+.stats .stat {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.stats .stat i {
+    color: purple;
+}
+
+.stats .stat .title {
+    color: black;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.stats .stat .text {
+    color: black;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* ===== SECCIÓN DE TESTIMONIOS ===== */
+
+.testimonials {
+    color: white;
+    padding: 40px;
+}
+
+.testimonials .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.testimonials .card {
+    padding: 10px;
+}
+
+.testimonials .circle {
+    background-color: transparent;
+    border: 3px solid purple;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    margin: auto;
+    padding: 5px;
+}
+
+.testimonials .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonials .card h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+}
+
+.testimonials .card p {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 16px;
+    color: black;
+}
+
+/* ===== FOOTER (PIE DE PÁGINA) ===== */
+
+footer {
+    background-color: purple;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+footer .copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer h1 {
+    font-size: 25px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer .links ul {
+    list-style: none;
+}
+
+footer .links ul li {
+    line-height: 2.5;
+}
+
+footer .links a {
+    color: white;
+}
+
+footer .links a:hover {
+    color: #9867C5;
+}
+
+footer .profiles {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .profiles a {
+    color: white;
+    margin: 0 10px;
+}
+
+footer .profiles a:hover {
+    color: #9867C5;
+}
+
+/* ===== ANIMACIONES ===== */
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* ===== MEDIA QUERIES - DISEÑO RESPONSIVO ===== */
+
+/* Tablets y pantallas más pequeñas */
+@media (max-width: 768px) {
+    .grid,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase {
+        height: auto;
+    }
+
+    .showcase-form {
+        justify-self: center;
+        margin: auto;
+        animation: slideInFromRight 1s ease-in;
+    }
+
+    .grid-item-2 {
+        display: none;
+    }
+
+    .lower-container .stats .flex {
+        flex-direction: column;
+    }
+
+    .stats {
+        padding-top: 50px;
+    }
+
+    .testimonials .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    footer .grid-3 {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    footer .copyright {
+        align-items: center;
+    }
+
+    footer .profiles {
+        justify-content: center;
+    }
+}
+
+/* Dispositivos móviles */
+@media (max-width: 500px) {
+    .navbar {
+        height: 100px;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .showcase-form {
+        width: 300px;
+    }
+
+    .btn {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .showcase input[type='email'] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
