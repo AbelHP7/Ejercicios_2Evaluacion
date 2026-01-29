@@ -245,21 +245,21 @@
 }
 
 .active-nav {
-    font-weight: 700 !important;
-    text-decoration: underline !important;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 601px) {
 
     body {
-        min-width: 0 !important;
-        width: 100% !important;
-        overflow-x: hidden !important;
+        min-width: 0;
+        width: 100%;
+        overflow-x: hidden;
     }
 
     img {
-        max-width: 100% !important;
-        height: auto !important;
+        max-width: 100%;
+        height: auto;
     }
 
     .store-container-main {
@@ -299,14 +299,14 @@
 @media screen and (max-width: 600px) {
 
     body {
-        min-width: 0 !important;
-        width: 100% !important;
-        overflow-x: hidden !important;
+        min-width: 0;
+        width: 100%;
+        overflow-x: hidden;
     }
 
     img {
-        max-width: 100% !important;
-        height: auto !important;
+        max-width: 100%;
+        height: auto;
     }
 
     .store-container-main {
@@ -398,6 +398,6 @@
     }
 
     .brand-logo {
-        display: none !important;
+        display: none;
     }
 }
