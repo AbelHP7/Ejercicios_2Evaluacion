@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. Conceptos Base y Preflight</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="p-8">
+    <!-- SECCIÓN 1: Efecto Preflight (Sin clases) -->
+    <section class="mb-12 border-b pb-8">
+        <h2 class="text-xl font-bold mb-4 text-blue-600">1. Elementos HTML estándar (Efecto Preflight)</h2>
+        <p class="mb-4 text-gray-600">Observa cómo estos elementos no tienen sus estilos por defecto del navegador:</p>
+
+        <!-- Al no tener clases, estos se verán "planos" debido al reset de Tailwind -->
+        <div class="border p-4 rounded bg-gray-50">
+            <h1>Esto es un H1 sin clases (parece texto normal)</h1>
+            <h2>Esto es un H2 sin clases</h2>
+            <p>Esto es un párrafo.</p>
+            <ul>
+                <li>Elemento de lista 1 (sin bullets)</li>
+                <li>Elemento de lista 2</li>
+            </ul>
+            <a href="#">Esto es un enlace (sin azul ni subrayado)</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: Estilando con Utility Classes -->
+    <section class="mb-12 border-b pb-8">
+        <h2 class="text-xl font-bold mb-4 text-blue-600">2. Estilando con Utility Classes</h2>
+        <p class="mb-4 text-gray-600">Aquí devolvemos el estilo explícitamente:</p>
+
+        <div class="border p-4 rounded bg-white">
+            <h1 class="text-4xl font-bold mb-4">Título Grande y Negrita (con clases)</h1>
+            <h2 class="text-2xl font-semibold mb-2">Subtítulo (con clases)</h2>
+            <ul class="list-disc list-inside mb-4">
+                <li>Elemento de lista con bullet</li>
+                <li>Otro elemento estilado</li>
+            </ul>
+            <a href="#" class="text-blue-500 underline">Enlace azul y subrayado</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: Estilos Base Globales -->
+    <section>
+        <h2 class="text-xl font-bold mb-4 text-blue-600">3. Prueba de @layer base</h2>
+        <p class="text-gray-600 mb-4">
+            Cuando descomentemos el código en <code>tailwind.css</code>, el siguiente H1 (que no tiene clases) debería
+            verse grande automáticamente.
+        </p>
+
+        <div class="border p-4 rounded bg-yellow-50">
+            <h1>Este H1 no tiene clases, pero heredará estilos de @layer base si están activos.</h1>
+        </div>
+    </section>
+</body>
+
+</html>

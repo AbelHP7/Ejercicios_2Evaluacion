@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04. Tipografía</title>
+    <!-- Google Fonts import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="p-8 space-y-12 bg-gray-50 text-gray-800">
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4 text-purple-700">1. Fuentes Personalizadas (Google Fonts)</h2>
+        <div class="space-y-4 border p-4 bg-white rounded">
+            <div>
+                <p class="text-sm text-gray-500">Fuente por defecto (Sans):</p>
+                <p class="text-xl">Hola, soy la fuente predeterminada (Inter/System).</p>
+            </div>
+
+            <div>
+                <p class="text-sm text-gray-500">Fuente 'Plus Jakarta Sans' (Arbitraria):</p>
+                <p class="font-[Plus_Jakarta_Sans] text-xl">Hola, soy Plus Jakarta Sans.</p>
+            </div>
+
+            <div>
+                <p class="text-sm text-gray-500">Fuente 'Playfair Display' (Arbitraria + Serif):</p>
+                <p class="font-[Playfair_Display] text-3xl italic">Diseño elegante y clásico.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4 text-purple-700">2. Tamaños y Pesos</h2>
+        <div class="space-y-2 border p-4 bg-white rounded">
+            <p class="text-xs font-thin">Extra pequeño (xs) y muy fino (thin/100)</p>
+            <p class="text-sm font-light">Pequeño (sm) y ligero (light/300)</p>
+            <p class="text-base font-normal">Base (base) y normal (400)</p>
+            <p class="text-lg font-medium">Grande (lg) y medio (medium/500)</p>
+            <p class="text-xl font-bold">Extra grande (xl) y negrita (bold/700)</p>
+            <p class="text-3xl font-black">3XL y Black (900)</p>
+            <p class="text-[50px] leading-none text-blue-500 font-bold">Tamaño arbitrario de 50px</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4 text-purple-700">3. Ejemplo Combinado</h2>
+        <div class="border p-8 bg-white rounded shadow-lg">
+            <h1 class="font-[Playfair_Display] text-5xl font-bold text-slate-800 mb-2">Editorial Design</h1>
+            <p class="font-[Plus_Jakarta_Sans] text-lg text-slate-500 font-light italic text-justify">
+                "La tipografía es el arte y la técnica de organizar los tipos para hacer que el lenguaje escrito sea
+                legible, legible y atractivo cuando se muestra."
+            </p>
+        </div>
+    </section>
+
+</body>
+
+</html>
