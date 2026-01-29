@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03. Colores y Personalización</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="p-8 space-y-8 bg-gray-50">
+
+    <section class="bg-white p-6 rounded shadow">
+        <h2 class="text-2xl font-bold mb-4">1. Uso Básico y Transparencia</h2>
+        <div class="space-y-4">
+            <h3 class="bg-red-900 text-white p-2">Fondo rojo oscuro, texto blanco</h3>
+            <h3 class="bg-black/90 text-pink-900/50 p-2">Fondo negro (90%), texto rosa (50%)</h3>
+        </div>
+    </section>
+
+    <section class="bg-white p-6 rounded shadow">
+        <h2 class="text-2xl font-bold mb-4">2. Valores Arbitrarios (Color personalizado)</h2>
+        <div class="p-4 rounded border">
+            <!-- Color exacto de Facebook -->
+            <button class="bg-[#1877f2] text-white px-4 py-2 rounded font-bold hover:opacity-90">
+                Botón Azul Facebook (#1877f2)
+            </button>
+        </div>
+    </section>
+
+    <section class="bg-white p-6 rounded shadow">
+        <h2 class="text-2xl font-bold mb-4">3. Icono SVG con clase 'fill'</h2>
+        <div class="p-4 border rounded flex items-center gap-4">
+            <p>El siguiente icono usa <code>fill-[#1877f2]</code>:</p>
+            <!-- Icono de Facebook con color personalizado -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-12 h-12 fill-[#1877f2]">
+                <path
+                    d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+</body>
+
+</html>
