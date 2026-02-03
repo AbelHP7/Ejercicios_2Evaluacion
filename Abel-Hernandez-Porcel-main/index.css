@@ -34,8 +34,9 @@ nav {
     width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 .brand-name {
@@ -413,12 +414,17 @@ nav {
     transition: all 0.3s ease;
 }
 
+
+/* ========================================
+   MEDIA QUERY PARA TABLETS (601px - 1024px)
+   ======================================== */
 @media screen and (max-width: 1024px) and (min-width: 601px) {
 
     body {
         min-width: 0;
         width: 100%;
         overflow-x: hidden;
+        /* Oculta scroll horizontal (evita que se salga contenido) */
     }
 
     img {
@@ -445,6 +451,7 @@ nav {
 
     .header-bottom .header-container {
         flex-direction: column;
+        /* Cambia de horizontal a vertical (apila elementos) */
         gap: 15px;
         padding: 15px 0;
     }
@@ -486,17 +493,24 @@ nav {
         width: 100%;
     }
 
+
     .footer-left {
         width: 90%;
+        /* TABLET: Ancho relativo (Desktop: 1200px fijo) */
     }
 }
 
+
+/* ========================================
+   MEDIA QUERY PARA MÓVILES (0px - 600px)
+   ======================================== */
 @media screen and (max-width: 600px) {
 
     body {
         min-width: 0;
         width: 100%;
         overflow-x: hidden;
+        /* Oculta scroll horizontal (evita que se salga contenido) */
     }
 
     img {
@@ -507,6 +521,7 @@ nav {
     .header-container {
         width: 95%;
         flex-direction: column;
+        /* Cambia de horizontal a vertical (apila elementos) */
         gap: 15px;
         padding: 15px 0;
     }
@@ -535,18 +550,22 @@ nav {
 
     .header-bottom .header-container {
         flex-direction: column;
+        /* Cambia de horizontal a vertical (apila elementos) */
         gap: 15px;
     }
 
     .hamburger-menu {
         display: flex;
+        /* Muestra el menú hamburguesa (☰) */
         align-self: flex-start;
         margin-left: 10px;
     }
 
     .header-nav {
         display: none;
+        /* Oculta el menú de navegación por defecto */
         flex-direction: column;
+        /* Cuando se muestre, será vertical */
         width: 100%;
         gap: 15px;
         padding: 15px 0;
@@ -633,20 +652,27 @@ nav {
 
     .simple-footer {
         padding: 20px 0;
+        /* padding mas pequeño */
     }
 
     .footer-left {
         width: 95%;
+        /* el ancho aumenta  */
         flex-direction: column;
+        /*pasa a vertical */
         gap: 20px;
+        /* pones separacion vertical */
         text-align: center;
+        /*el texto se centra */
     }
 
     .footer-left p {
         font-size: 10px;
+        /* texto mas pequeño */
     }
 
     .footer-right {
         gap: 20px;
+        /* iconos mas juntos*/
     }
 }
