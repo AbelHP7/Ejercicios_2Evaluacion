@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10. Transiciones y Animaciones</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="p-8 bg-gray-50">
+    <!-- SECCIÓN 1: Transiciones Básicas -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">1. Transiciones Básicas</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <!-- Transition por defecto -->
+            <button class="bg-blue-500 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition">
+                transition
+            </button>
+
+            <!-- Transition colors -->
+            <button class="bg-green-500 hover:bg-red-500 text-white px-6 py-3 rounded-lg transition-colors">
+                colors
+            </button>
+
+            <!-- Transition transform -->
+            <button class="bg-purple-500 hover:scale-110 text-white px-6 py-3 rounded-lg transition-transform">
+                transform
+            </button>
+
+            <!-- Transition all -->
+            <button class="bg-yellow-500 hover:bg-red-500 hover:scale-110 hover:shadow-2xl 
+                           text-white px-6 py-3 rounded-lg transition-all">
+                all
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: Duraciones -->
+    <section class="mb-12 border-b pb-8">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">2. Duraciones: duration-*</h2>
+        <p class="mb-4 text-gray-600">Pasa el ratón para ver la diferencia de velocidades</p>
+
+        <div class="space-y-4">
+            <div class="bg-blue-500 h-12 hover:translate-x-64 transition duration-100 
+                        text-white flex items-center px-4 rounded">
+                duration-100 (100ms) - Muy rápido
+            </div>
+            <div class="bg-green-500 h-12 hover:translate-x-64 transition duration-300 
+                        text-white flex items-center px-4 rounded">
+                duration-300 (300ms) - Normal
+            </div>
+            <div class="bg-purple-500 h-12 hover:translate-x-64 transition duration-500 
+                        text-white flex items-center px-4 rounded">
+                duration-500 (500ms) - Lento
+            </div>
+            <div class="bg-red-500 h-12 hover:translate-x-64 transition duration-1000 
+                        text-white flex items-center px-4 rounded">
+                duration-1000 (1 segundo) - Muy lento
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: Timing Functions -->
+    <section class="mb-12 border-b pb-8">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">3. Timing Functions: ease-*</h2>
+
+        <div class="space-y-4">
+            <div class="bg-blue-500 h-12 hover:translate-x-64 transition duration-1000 ease-linear 
+                        text-white flex items-center px-4 rounded">
+                ease-linear (velocidad constante)
+            </div>
+            <div class="bg-green-500 h-12 hover:translate-x-64 transition duration-1000 ease-in 
+                        text-white flex items-center px-4 rounded">
+                ease-in (empieza lento)
+            </div>
+            <div class="bg-yellow-500 h-12 hover:translate-x-64 transition duration-1000 ease-out 
+                        text-white flex items-center px-4 rounded">
+                ease-out (termina lento)
+            </div>
+            <div class="bg-purple-500 h-12 hover:translate-x-64 transition duration-1000 ease-in-out 
+                        text-white flex items-center px-4 rounded">
+                ease-in-out (empieza y termina lento)
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: Botón Interactivo Completo -->
+    <section class="mb-12 border-b pb-8">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">4. Botón con Múltiples Efectos</h2>
+
+        <div class="flex justify-center">
+            <button class="bg-gradient-to-r from-purple-500 to-pink-500
+                          text-white font-bold py-4 px-8 rounded-lg
+                          hover:from-purple-600 hover:to-pink-600
+                          hover:scale-105
+                          hover:shadow-2xl
+                          active:scale-95
+                          transition-all duration-300 ease-in-out">
+                Click Me!
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: Animaciones Predefinidas -->
+    <section class="mb-12 border-b pb-8">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">5. Animaciones Predefinidas</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Spin -->
+            <div class="bg-white p-6 rounded-lg shadow text-center">
+                <div class="flex justify-center mb-3">
+                    <svg class="animate-spin h-12 w-12 text-blue-500" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"
+                            fill="none"></circle>
+                        <path class="opacity-75" fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                        </path>
+                    </svg>
+                </div>
+                <p class="font-semibold">animate-spin</p>
+            </div>
+
+            <!-- Ping -->
+            <div class="bg-white p-6 rounded-lg shadow text-center">
+                <div class="flex justify-center mb-3">
+                    <span class="relative flex h-12 w-12">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-12 w-12 bg-red-500"></span>
+                    </span>
+                </div>
+                <p class="font-semibold">animate-ping</p>
+            </div>
+
+            <!-- Pulse -->
+            <div class="bg-white p-6 rounded-lg shadow text-center">
+                <div class="flex justify-center mb-3">
+                    <div class="animate-pulse h-12 w-12 bg-purple-500 rounded-lg"></div>
+                </div>
+                <p class="font-semibold">animate-pulse</p>
+            </div>
+
+            <!-- Bounce -->
+            <div class="bg-white p-6 rounded-lg shadow text-center">
+                <div class="flex justify-center mb-3">
+                    <div class="text-5xl animate-bounce">↓</div>
+                </div>
+                <p class="font-semibold">animate-bounce</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 6: Card con Efectos -->
+    <section class="mb-12 border-b pb-8">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">6. Card con Hover Effects</h2>
+
+        <div class="max-w-sm mx-auto">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden
+                       hover:shadow-2xl
+                       hover:-translate-y-2
+                       transition-all duration-300
+                       group">
+                <!-- Imagen con zoom al hover -->
+                <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-600
+                           group-hover:scale-110
+                           transition-transform duration-500"></div>
+
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">
+                        Producto Destacado
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        Descripción del producto con características principales.
+                    </p>
+                    <button class="bg-blue-500 text-white px-6 py-2 rounded-lg
+                                  hover:bg-blue-600
+                                  active:scale-95
+                                  transition-all duration-200">
+                        Comprar Ahora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 7: Skeleton Screens (Loading) -->
+    <section class="mb-12 border-b pb-8">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">7. Skeleton Screen (Loading State)</h2>
+
+        <div class="max-w-md mx-auto bg-white rounded-xl shadow-lg p-6">
+            <!-- Skeleton para imagen -->
+            <div class="animate-pulse bg-gray-300 h-48 rounded-lg mb-4"></div>
+
+            <!-- Skeleton para título -->
+            <div class="animate-pulse bg-gray-300 h-6 rounded w-3/4 mb-3"></div>
+
+            <!-- Skeleton para texto -->
+            <div class="space-y-2">
+                <div class="animate-pulse bg-gray-300 h-4 rounded"></div>
+                <div class="animate-pulse bg-gray-300 h-4 rounded w-5/6"></div>
+                <div class="animate-pulse bg-gray-300 h-4 rounded w-4/6"></div>
+            </div>
+
+            <!-- Skeleton para botón -->
+            <div class="animate-pulse bg-gray-300 h-10 rounded-lg w-32 mt-4"></div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 8: Botón con Borde Animado -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">8. Botón con Fondo que Sube</h2>
+
+        <div class="flex justify-center">
+            <button class="relative px-8 py-4 text-blue-600 font-bold
+                          border-2 border-blue-600 rounded-lg
+                          overflow-hidden
+                          group">
+                <span class="relative z-10 group-hover:text-white transition-colors duration-300">
+                    Hover Me
+                </span>
+                <span class="absolute inset-0 bg-blue-600
+                            translate-y-full
+                            group-hover:translate-y-0
+                            transition-transform duration-300"></span>
+            </button>
+        </div>
+    </section>
+</body>
+
+</html>

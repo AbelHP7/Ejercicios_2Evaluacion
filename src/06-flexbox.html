@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06. Flexbox</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="p-8 bg-gray-50">
+    <!-- SECCIÓN 1: Navbar con Flexbox -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">1. Navbar con Flexbox</h2>
+        <p class="mb-4 text-gray-600">Navegación horizontal con logo, enlaces y botón</p>
+
+        <nav class="h-20 bg-slate-800 flex items-center justify-between px-10 rounded-lg">
+            <!-- Logo -->
+            <div class="text-white text-xl font-bold">LOGO</div>
+
+            <!-- Enlaces centrados -->
+            <div class="text-white flex gap-10">
+                <a href="#" class="hover:text-amber-400 transition-colors">Inicio</a>
+                <a href="#" class="hover:text-amber-400 transition-colors">Acerca de</a>
+                <a href="#" class="hover:text-amber-400 transition-colors">Contacto</a>
+            </div>
+
+            <!-- Botón -->
+            <a href="#" class="bg-amber-700 text-white px-7 py-3 rounded-lg hover:bg-amber-600 transition-colors">
+                Contáctame
+            </a>
+        </nav>
+    </section>
+
+    <!-- SECCIÓN 2: Dirección de Flex -->
+    <section class="mb-12 border-b pb-8">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">2. Dirección: flex-row vs flex-col</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Flex Row -->
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="font-semibold mb-3 text-lg">flex-row (horizontal)</h3>
+                <div class="flex flex-row gap-4">
+                    <div class="bg-blue-500 text-white p-4 rounded">Item 1</div>
+                    <div class="bg-green-500 text-white p-4 rounded">Item 2</div>
+                    <div class="bg-red-500 text-white p-4 rounded">Item 3</div>
+                </div>
+            </div>
+
+            <!-- Flex Column -->
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="font-semibold mb-3 text-lg">flex-col (vertical)</h3>
+                <div class="flex flex-col gap-4">
+                    <div class="bg-blue-500 text-white p-4 rounded">Item 1</div>
+                    <div class="bg-green-500 text-white p-4 rounded">Item 2</div>
+                    <div class="bg-red-500 text-white p-4 rounded">Item 3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: Justify Content -->
+    <section class="mb-12 border-b pb-8">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">3. Distribución Horizontal: justify-*</h2>
+
+        <div class="space-y-4">
+            <!-- justify-start -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <p class="text-sm text-gray-500 mb-2">justify-start</p>
+                <div class="flex justify-start gap-4">
+                    <div class="bg-purple-500 text-white px-6 py-3 rounded">A</div>
+                    <div class="bg-purple-500 text-white px-6 py-3 rounded">B</div>
+                    <div class="bg-purple-500 text-white px-6 py-3 rounded">C</div>
+                </div>
+            </div>
+
+            <!-- justify-center -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <p class="text-sm text-gray-500 mb-2">justify-center</p>
+                <div class="flex justify-center gap-4">
+                    <div class="bg-purple-500 text-white px-6 py-3 rounded">A</div>
+                    <div class="bg-purple-500 text-white px-6 py-3 rounded">B</div>
+                    <div class="bg-purple-500 text-white px-6 py-3 rounded">C</div>
+                </div>
+            </div>
+
+            <!-- justify-between -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <p class="text-sm text-gray-500 mb-2">justify-between</p>
+                <div class="flex justify-between gap-4">
+                    <div class="bg-purple-500 text-white px-6 py-3 rounded">A</div>
+                    <div class="bg-purple-500 text-white px-6 py-3 rounded">B</div>
+                    <div class="bg-purple-500 text-white px-6 py-3 rounded">C</div>
+                </div>
+            </div>
+
+            <!-- justify-evenly -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <p class="text-sm text-gray-500 mb-2">justify-evenly</p>
+                <div class="flex justify-evenly gap-4">
+                    <div class="bg-purple-500 text-white px-6 py-3 rounded">A</div>
+                    <div class="bg-purple-500 text-white px-6 py-3 rounded">B</div>
+                    <div class="bg-purple-500 text-white px-6 py-3 rounded">C</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: Alineación Vertical -->
+    <section class="mb-12 border-b pb-8">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">4. Alineación Vertical: items-*</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- items-start -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <p class="text-sm text-gray-500 mb-2">items-start</p>
+                <div class="h-40 flex items-start gap-4 border-2 border-dashed border-gray-300 p-2">
+                    <div class="bg-blue-500 text-white px-4 py-2 rounded">A</div>
+                    <div class="bg-blue-500 text-white px-4 py-2 rounded">B</div>
+                </div>
+            </div>
+
+            <!-- items-center -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <p class="text-sm text-gray-500 mb-2">items-center</p>
+                <div class="h-40 flex items-center gap-4 border-2 border-dashed border-gray-300 p-2">
+                    <div class="bg-green-500 text-white px-4 py-2 rounded">A</div>
+                    <div class="bg-green-500 text-white px-4 py-2 rounded">B</div>
+                </div>
+            </div>
+
+            <!-- items-end -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <p class="text-sm text-gray-500 mb-2">items-end</p>
+                <div class="h-40 flex items-end gap-4 border-2 border-dashed border-gray-300 p-2">
+                    <div class="bg-red-500 text-white px-4 py-2 rounded">A</div>
+                    <div class="bg-red-500 text-white px-4 py-2 rounded">B</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: Gap (Espaciado) -->
+    <section class="mb-12 border-b pb-8">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">5. Espaciado con gap-*</h2>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+            <p class="mb-4 text-gray-600">Enlaces con separación automática usando gap-8</p>
+            <div class="flex gap-8">
+                <a href="#" class="text-blue-600 hover:underline">Inicio</a>
+                <a href="#" class="text-blue-600 hover:underline">Productos</a>
+                <a href="#" class="text-blue-600 hover:underline">Servicios</a>
+                <a href="#" class="text-blue-600 hover:underline">Blog</a>
+                <a href="#" class="text-blue-600 hover:underline">Contacto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 6: Flex Wrap -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">6. Flex Wrap: Elementos que Saltan de Línea</h2>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+            <p class="mb-4 text-gray-600">Elementos que se ajustan automáticamente cuando no caben</p>
+            <div class="flex flex-wrap gap-4">
+                <div class="bg-indigo-500 text-white px-8 py-4 rounded-lg">Item 1</div>
+                <div class="bg-indigo-500 text-white px-8 py-4 rounded-lg">Item 2</div>
+                <div class="bg-indigo-500 text-white px-8 py-4 rounded-lg">Item 3</div>
+                <div class="bg-indigo-500 text-white px-8 py-4 rounded-lg">Item 4</div>
+                <div class="bg-indigo-500 text-white px-8 py-4 rounded-lg">Item 5</div>
+                <div class="bg-indigo-500 text-white px-8 py-4 rounded-lg">Item 6</div>
+                <div class="bg-indigo-500 text-white px-8 py-4 rounded-lg">Item 7</div>
+                <div class="bg-indigo-500 text-white px-8 py-4 rounded-lg">Item 8</div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
