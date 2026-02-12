@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white font-sans antialiased min-h-screen flex flex-col relative overflow-x-hidden">
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-50 bg-black/95 transition-transform duration-300 -translate-y-full flex flex-col items-center justify-center space-y-8">
+        <button id="close-menu" class="absolute top-6 right-6 text-gray-400 hover:text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <a href="#" class="text-3xl font-light hover:text-indigo-400 transition-colors tracking-widest uppercase">Acerca
+            de</a>
+        <a href="registro.html"
+            class="bg-blue-600 text-white text-xl font-bold py-3 px-8 rounded hover:bg-blue-700 transition-colors uppercase tracking-wider">Ingresar
+            al curso</a>
+    </div>
+
+    <!-- Header -->
+    <nav class="w-full flex items-center justify-between px-6 py-6 z-40 bg-black">
+        <!-- Title -->
+        <div>
+            <h1 class="text-xl font-bold text-white tracking-wide">CodeCraft</h1>
+        </div>
+
+        <!-- Desktop Menu (Visible on md and up) -->
+        <div class="hidden md:flex items-center space-x-8">
+            <a href="#"
+                class="text-sm font-light hover:text-indigo-400 transition-colors tracking-widest uppercase">Acerca
+                de</a>
+            <a href="registro.html"
+                class="bg-blue-600 text-white text-sm font-bold py-2 px-6 rounded hover:bg-blue-700 transition-colors uppercase tracking-wider">Ingresar
+                al curso</a>
+        </div>
+
+        <!-- Hamburger Menu Button (Hidden on md and up) -->
+        <button id="open-menu" class="text-white hover:text-gray-300 focus:outline-none md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Hero / Subscribe Section -->
+    <section class="w-full px-4 mb-12">
+        <div
+            class="relative w-full rounded-3xl overflow-hidden h-[600px] flex items-center justify-center text-center px-4 md:items-end md:justify-start md:text-left md:px-16 md:pb-16">
+            <!-- Background Image -->
+            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop"
+                alt="Desk Setup" class="absolute inset-0 w-full h-full object-cover">
+
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-b from-indigo-900/40 via-purple-900/40 to-black/80"></div>
+
+            <!-- Content -->
+            <div class="relative z-10 max-w-lg mx-auto mt-20 md:mx-0 md:mt-0">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white leading-tight">Domina CSS desde cero</h2>
+                <p class="text-gray-200 mb-8 text-sm md:text-base leading-relaxed">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde qui iure in et placeat neque
+                    blanditiis doloribus quaerat nostrum similique! Est possimus temporibus expedita aliquam. Dolorum
+                    optio cupiditate velit totam!
+                </p>
+                <a href="registro.html"
+                    class="bg-white text-black font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-colors inline-block">
+                    Inscríbete ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content: Study Session Cards -->
+    <main class="flex-grow px-4 pb-16 relative z-10 pt-10">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Title -->
+            <div class="text-left mb-12 max-w-5xl mx-auto">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-indigo-900/50 text-indigo-300 text-xs font-semibold tracking-wider mb-4 border border-indigo-500/30">PLAN
+                    DE ESTUDIOS</span>
+                <h3
+                    class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                    Lo que aprenderás</h3>
+                <p class="text-gray-400 mt-4 max-w-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quisquam, quod.</p>
+            </div>
+
+            <!-- Cards Grid (Mobile: Stack, Desktop: 4 Columns) -->
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+
+                <!-- Card 1: Fundamentos de CSS -->
+                <div
+                    class="bg-zinc-900/50 rounded-2xl p-8 hover:bg-zinc-800 transition-colors duration-300 border border-white/5 flex flex-col items-start text-left group">
+                    <div class="mb-6 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-8 w-8 text-white group-hover:text-gray-300 transition-colors" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Fundamentos de CSS</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Quisquam, quod.</p>
+                </div>
+
+                <!-- Card 2: Técnicas Avanzadas -->
+                <div
+                    class="bg-zinc-900/50 rounded-2xl p-8 hover:bg-zinc-800 transition-colors duration-300 border border-white/5 flex flex-col items-start text-left group">
+                    <div class="mb-6 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-8 w-8 text-white group-hover:text-gray-300 transition-colors" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Técnicas Avanzadas</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Quisquam, quod.</p>
+                </div>
+
+                <!-- Card 3: Aprendizaje Basado en Proyectos -->
+                <div
+                    class="bg-zinc-900/50 rounded-2xl p-8 hover:bg-zinc-800 transition-colors duration-300 border border-white/5 flex flex-col items-start text-left group">
+                    <div class="mb-6 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-8 w-8 text-white group-hover:text-gray-300 transition-colors" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Aprendizaje Basado en Proyectos</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Quisquam, quod.</p>
+                </div>
+
+                <!-- Card 4: Diseño Responsivo -->
+                <div
+                    class="bg-zinc-900/50 rounded-2xl p-8 hover:bg-zinc-800 transition-colors duration-300 border border-white/5 flex flex-col items-start text-left group">
+                    <div class="mb-6 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-8 w-8 text-white group-hover:text-gray-300 transition-colors" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Diseño Responsivo</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Quisquam, quod.</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-blue-900/30 text-blue-300 text-xs font-semibold tracking-wider mb-4 border border-blue-500/30">TESTIMONIOS</span>
+                <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Lo que dicen nuestros estudiantes</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto">Únete a cientos de desarrolladores que han transformado su
+                    carrera con nosotros.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div
+                    class="bg-zinc-900/30 border border-white/5 p-8 rounded-2xl relative hover:bg-zinc-900/50 transition-colors duration-300">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop"
+                            alt="María González" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="text-white font-bold">María González</h4>
+                            <p class="text-gray-500 text-xs uppercase tracking-wide">Frontend Dev</p>
+                        </div>
+                    </div>
+                    <!-- Stars -->
+                    <div class="flex text-yellow-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">"El mejor curso de CSS que he tomado. La
+                        metodología es increíble y los proyectos son muy realistas. ¡Totalmente recomendado!"</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div
+                    class="bg-zinc-900/30 border border-white/5 p-8 rounded-2xl relative hover:bg-zinc-900/50 transition-colors duration-300">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
+                            alt="Carlos Rodríguez" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="text-white font-bold">Carlos Rodríguez</h4>
+                            <p class="text-gray-500 text-xs uppercase tracking-wide">Web Designer</p>
+                        </div>
+                    </div>
+                    <!-- Stars -->
+                    <div class="flex text-yellow-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">"Gracias a este curso pude conseguir mi primer
+                        empleo como desarrollador web. Las explicaciones son claras y directas."</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div
+                    class="bg-zinc-900/30 border border-white/5 p-8 rounded-2xl relative hover:bg-zinc-900/50 transition-colors duration-300">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop"
+                            alt="Laura Martínez" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="text-white font-bold">Laura Martínez</h4>
+                            <p class="text-gray-500 text-xs uppercase tracking-wide">Freelancer</p>
+                        </div>
+                    </div>
+                    <!-- Stars -->
+                    <div class="flex text-yellow-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">"Me encantó la sección de diseño responsivo. Ahora
+                        mis sitios web se ven perfectos en cualquier dispositivo movil."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 px-6 mt-12 mb-12">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="flex flex-wrap justify-center gap-6 mb-8 text-sm text-gray-400 font-medium">
+                <a href="#" class="hover:text-white transition-colors">Contáctanos</a>
+                <a href="#" class="hover:text-white transition-colors">Términos y condiciones</a>
+                <a href="#" class="hover:text-white transition-colors">Política de privacidad</a>
+            </div>
+            <p class="text-xs text-gray-600">&copy; 2026 Proyecto Landing. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const openMenuBtn = document.getElementById('open-menu');
+        const closeMenuBtn = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        openMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('-translate-y-full');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-y-full');
+        });
+
+        // Close menu when clicking a link
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('-translate-y-full');
+            });
+        });
+    </script>
+</body>
+
+</html>

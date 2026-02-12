@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - CodeCraft</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white font-sans antialiased min-h-screen flex flex-col relative overflow-x-hidden">
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-50 bg-black/95 transition-transform duration-300 -translate-y-full flex flex-col items-center justify-center space-y-8">
+        <button id="close-menu" class="absolute top-6 right-6 text-gray-400 hover:text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <a href="index.html"
+            class="text-3xl font-light hover:text-indigo-400 transition-colors tracking-widest uppercase">Inicio</a>
+        <a href="#" class="text-3xl font-light hover:text-indigo-400 transition-colors tracking-widest uppercase">Acerca
+            de</a>
+    </div>
+
+    <!-- Header -->
+    <nav class="w-full flex items-center justify-between px-6 py-6 z-40 bg-black">
+        <!-- Title -->
+        <div>
+            <a href="index.html" class="text-xl font-bold text-white tracking-wide">CodeCraft</a>
+        </div>
+
+        <!-- Desktop Menu (Visible on md and up) -->
+        <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html"
+                class="text-sm font-light hover:text-indigo-400 transition-colors tracking-widest uppercase">Volver al
+                inicio</a>
+        </div>
+
+        <!-- Hamburger Menu Button (Hidden on md and up) -->
+        <button id="open-menu" class="text-white hover:text-gray-300 focus:outline-none md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Registration Section -->
+    <main class="flex-grow flex items-center justify-center px-4 py-12 relative">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-gradient-to-b from-indigo-900/20 via-black to-black z-0 pointer-events-none">
+        </div>
+
+        <div class="glass-effect p-8 md:p-12 rounded-3xl w-full max-w-lg z-10 shadow-2xl relative overflow-hidden">
+            <!-- Glow effect -->
+            <div class="absolute -top-24 -right-24 w-48 h-48 bg-blue-600/30 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-purple-600/30 rounded-full blur-3xl"></div>
+
+            <h2 class="text-3xl font-bold text-center mb-2">Únete a CodeCraft</h2>
+            <p class="text-gray-400 text-center mb-8 text-sm">Comienza tu viaje en el desarrollo web hoy mismo.</p>
+
+            <form class="space-y-6">
+                <!-- Name Field -->
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Nombre Completo</label>
+                    <input type="text" id="name" name="name"
+                        class="w-full bg-zinc-900/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        placeholder="Ej. Juan Pérez">
+                </div>
+
+                <!-- Email Field -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Correo Electrónico</label>
+                    <input type="email" id="email" name="email"
+                        class="w-full bg-zinc-900/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        placeholder="tucorreo@ejemplo.com">
+                </div>
+
+                <!-- Password Field -->
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-300 mb-2">Contraseña</label>
+                    <input type="password" id="password" name="password"
+                        class="w-full bg-zinc-900/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        placeholder="••••••••">
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-lg shadow-lg hover:shadow-blue-500/20 transition-all transform hover:-translate-y-0.5 duration-200">
+                    Crear Cuenta
+                </button>
+
+                <!-- Footer Text -->
+                <p class="text-center text-gray-400 text-xs mt-6">
+                    ¿Ya tienes una cuenta? <a href="#"
+                        class="text-blue-400 hover:text-blue-300 font-semibold transition-colors">Inicia Sesión</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 px-6 mt-auto">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-xs text-gray-600">&copy; 2026 CodeCraft. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const openMenuBtn = document.getElementById('open-menu');
+        const closeMenuBtn = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        openMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('-translate-y-full');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-y-full');
+        });
+
+        // Close menu when clicking a link
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('-translate-y-full');
+            });
+        });
+    </script>
+</body>
+
+</html>
